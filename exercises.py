@@ -188,4 +188,44 @@ def determine_season():
 
 
 # Call the function
-determine_season()
+# determine_season()
+
+# Exercise 6: Number Guessing Game
+#
+# Write a Python function named `guess_number` that allows a user to guess a predetermined number within a range.
+#
+# Requirements:
+# - Set a fixed number as the target for guessing (e.g., 42).
+# - Prompt the user to guess a number within a range (e.g., 1 to 100).
+# - Allow the user to guess up to five times.
+# - After each guess, use conditional statements with AND, OR, and NOT to give the user hints like:
+#   - "Guess is too low" or "Guess is too high."
+#   - "Last chance!" when they are on their fifth guess.
+# - Print "Congratulations, you guessed correctly!" if they guess the number.
+# - Print "Sorry, you failed to guess the number in five attempts." if they do not succeed.
+#
+# Hints:
+# - Use a for loop with a range to limit guesses to five.
+# - Use logical AND, OR, and NOT to check conditions and provide appropriate feedback.
+
+def guess_number():
+    # Your control flow logic goes here
+    the_number = 33
+    for i in range(5):
+        guessed_number = input("Please input a number between 1 and 100. Enter Number: ")
+        guessed_number = int(guessed_number)
+        if i == 3:
+            print("Last chance!")
+        if guessed_number > the_number:
+            print("Quess is to high!")
+        elif guessed_number < the_number:
+            print("Quess is to low!")
+        elif guessed_number == the_number:
+            break
+    if guessed_number != the_number:
+        print('Sorry you lose')
+    else:
+        print("You win!")
+# Call the function
+guess_number()
+
