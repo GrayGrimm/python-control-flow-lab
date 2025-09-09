@@ -136,7 +136,7 @@ def weather_advice():
     is_cold = input("Is it cold outside? (yes/no)").lower()
     is_raining = input("Is it raining? (yes/no)").lower()
 
-    if is_cold and is_raining == 'yes':
+    if is_cold == 'yes' and is_raining == 'yes':
         print("Wear a waterproof coat.")
     elif is_cold == 'yes' and is_raining == 'no':
         print("Wear a warm coat.")
